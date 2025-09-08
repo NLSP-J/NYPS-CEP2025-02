@@ -1,9 +1,10 @@
 import pygame
-import math
+import math, time
 import random
 from pygame.locals import *
+import asyncio
 
-
+random.seed(time.time())
 # === Configuration ===
 SCREEN_W, SCREEN_H = 1024, 768
 FPS = 60
@@ -176,8 +177,10 @@ def main():
            draw_minimap(screen, gx, gy, pa)
        pygame.display.flip()
 
+       await asyncio.sleep(0)
 
-main()
+asyncio.run(main())
+
 
 
 
