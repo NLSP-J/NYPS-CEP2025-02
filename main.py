@@ -122,7 +122,7 @@ def draw_minimap(sc, px, py, pa):
    sc.blit(map_surf, (5, 5))
 
 
-def main():
+async def main():
    global gx, gy, pa, vertical_offset, vertical_vel, on_ground, show_minimap
 
    pygame.init()
@@ -180,6 +180,7 @@ def main():
        await asyncio.sleep(0)
 
 asyncio.run(main())
+
 
 
 
